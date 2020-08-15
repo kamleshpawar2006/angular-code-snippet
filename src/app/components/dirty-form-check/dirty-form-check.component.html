@@ -1,0 +1,20 @@
+<h2>Dirty Form Check</h2>
+
+<h3>Resources</h3>
+<div><a href="https://github.com/ngneat/dirty-check-forms">https://github.com/ngneat/dirty-check-forms</a></div>
+<div><a href="https://openbase.io/js/@ngneat/dirty-check-forms">https://openbase.io/js/@ngneat/dirty-check-forms</a></div>
+<div><a href="https://github.com/ngneat/dirty-check-forms/tree/master/apps/playground">https://github.com/ngneat/dirty-check-forms/tree/master/apps/playground</a></div>
+<div><a href="https://netbasal.com/detect-unsaved-changes-in-angular-forms-75fd8f5f1fa6">https://netbasal.com/detect-unsaved-changes-in-angular-forms-75fd8f5f1fa6</a></div>
+===============================================================================================
+
+<form [formGroup]="settings">
+  <input type="text" formControlName="firstName" />
+  <input type="text" formControlName="lastName" />
+  <button (click)="submit()">Submit</button>
+</form>
+<button (click)="add('Nagpur')" type="button">Add</button>
+<button (click)="remove()">Remove</button>
+
+<pre>
+  {{ settings.value | json }}
+</pre>
